@@ -1,13 +1,14 @@
 package com.dids.expensetrack.component
 
 import android.content.Context
+import com.dids.expensetrack.module.DatabaseModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AndroidSupportInjectionModule::class])
+@Component(modules = [AndroidSupportInjectionModule::class, DatabaseModule::class])
 interface AppComponent {
     @Component.Factory
     interface Factory {

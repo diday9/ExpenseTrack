@@ -22,5 +22,5 @@ data class Activity(
     @ColumnInfo(name = "date") val date: Date,
     @ColumnInfo(name = "payor_payee") val payorPayee: String = "",
     @ColumnInfo(name = "type") val type: String,
-    @ColumnInfo(name = "category_id") val categoryId: Int
+    @ColumnInfo(name = "category_id", index = true) val categoryId: Int
 )

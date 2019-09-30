@@ -19,6 +19,6 @@ data class Account(
     @ColumnInfo(name = "initial_balance") val initialBalance: Double = 0.0,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "description") val description: String = "",
-    @ColumnInfo(name = "type_id") val accountTypeId: Int,
+    @ColumnInfo(name = "type_id", index = true) val accountTypeId: Int,
     @ColumnInfo(name = "current_balance") val currentBalance: Double = 0.0
 )
